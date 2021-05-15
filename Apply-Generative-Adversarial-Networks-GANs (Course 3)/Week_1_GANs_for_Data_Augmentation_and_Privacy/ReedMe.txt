@@ -1,0 +1,287 @@
+1. Welcome to Week 1
+
+Uygulama alanları:
+	- Bir fotoğrafı alıp, konuşan video ile birleştirirsen
+	fotoğraftaki kişinin konuştuğu bir video yapabilirsin
+	- Tasarım - Çizim yaptığın şeyleri gerçekçi bir şekilde
+	görüntülemeni sağlar
+	- Photoshop uygulamaları
+
+Data Augmentation
+
+Mesela otonom araçlardaki görüntü işleme için
+kullandığın modeli eğitirken yasa kapsamında gerçek
+insan yüzü kullanman yasak.
+
+Bu durumda GAN generated veri ile train yapabilirsin
+
+*Con of GANs for Privacy
+- GAN sample is nearly identical to a real sample
+
+
+-----------------------------
+
+
+2. Overview of GAN Applications
+
+GAN Applications;
+
+	- Image to image translation
+	  extensions to other modalities such as text audio video
+	- Image editing, art, media
+	- Medicine and climate change
+
+GAN adversarial convept use in other research areas
+
+
+*Image to Image
+one style to another
+
+GauGAN: 
+Mesela dümdüz çizgiler çekerek doğa fotoğrafı çizdirebiliyorsun:
+
+Super-Resolution GAN:
+orjinal bir image'ı sharpened image yapabiliyorsun
+daha net bir görüntü elde ediyorsun bu şekilde
+resolution'larını arttırıyorsun
+
+Multimodal image-to-image translation:
+one domain to another domain
+kedi fotoğrafını köpeğe çevirmiş mesela
+iki ayrı köpek cinsini oluşturmuş
+modelinde bu köpeklerin label'ı yok
+yani unsupervised aslında
+
+Text-to-Image:
+"the bird is black with green and has a very short beak."
+diyince sana bu kuşun fotoğrafını oluşturuyor
+
+Image-and-Landmark-to-Video:
+Image of Mona Lisa + Face landmarks(video of someone talking) -> Talking heads
+Harry Potter talking paintings gibi
+
+Image Filters:
+Snapchat filtreleri gibi
+Güzellik firmaları - makyaj uygulama
+
+Image Editing:
+Image -> mask -> edited mask -> edited image
+
+Stylized Images:
+Democratized art
+Art work
+
+Data Augmentation:
+Increasing dataset size and diversity
+
+Medicine:
+Simulating tissues
+
+Climate Change:
+Real input - generated flated place image output
+1-2 derece küresel ısınmanın dünya üzerindeki etkisi
+Yoshua Bengio
+
+Media:
+Deepfakes
+simulating someone with a different identity to help protect them
+while lending them a voice
+
+Adversarial research areas - robustness
+bir fotoğraf var, öyle bir noise ekliyosun ki hiç alakası
+olmayan bir şey zannediyo model onu, hem de yüksek verimlilik ile
+
+
+-------------------
+
+3. Data Augmentation: Methods and Uses
+
+Supplement data when real data is too expensive and/or too rare
+
+Traditional vs GANs
+
+!!!!!
+also you can mix data augmentation techniques!
+how to best combine images from all different
+types of data augmentation techniques
+RandAugment!!!
+https://arxiv.org/abs/1909.13719
+
+*Use Cases
+- gaze detection -> kişi nereye odaklanmış durumda, nereye bakıyor?
+  Sentetik bir görüntüyü gerçekmiş gibi genetrate ediyor
+
+- speech emotion recognition
+  konuşurken nasıl bir ruh halindesin, modun ne
+  generate some fake spectrograms
+
+- synthetic liver lesions
+  doku bozulması
+  kanser verileri
+
+-----------------------------------------
+
+4. Data Augmentation Pros & Cons
+
+Pros of GAN Data Augmentation
+
+- Better than hand-crafted synthetic examples
+
+- Generate more labeled examples
+
+- Improve downstream model generalization
+
+Cons of GAN Data Augmentation
+
+- Diversity is limited to the data available
+  Elindeki verilere çok benzer sonuç alabiliyosun
+
+- Not useful when overfit to real data
+  aşırı benzer olunca kendi verin üzerinde train etmenden
+  farkı kalmıyo
+
+
+mimicking yapıyosa, yani çok benzer taklit,
+bu yardımcı olmayabilir, epoch arttırmak gibi olacak sadece
+
+
+GAN is used to augment data when you want
+to provide realistic supplemental images
+
+
+----------------------------
+
+5. GANs for Privacy
+
+Motications for Medical Privacy
+
+- Protects real patient data
+
+- Can encourage data-sharing between institutions
+
+- Less expensive and more abundant than real data
+
+
+Pro of GANs for Privacy
+gerçek veri yerine fake verileri kullanarak train ediyolar,
+gerçekteki kadar yüksek verimlilik yok,
+ancak yakın bir sonuç alınıyor
+
+Con of GANs for Privacy
+gan sample is nearly identical to a real sample
+yeni veriye bakınca da aslında o kadar da
+privacy korumuş olmuyorsun
+ancak durum böyle de olsa bir sürü veri üretiliyor,
+hangisinin gerçek hangisinin fake olduğu belli değil arada
+
+post-processing may help avoid this data leakage
+(çok yakın olanları veri seti içinden çıkarıp atıyor)
+(pek de iyi sonuç vermeyebilir ama bu, might not be perfect)
+
+
+--------------------------------
+
+6. GANs for Anonymity
+
+- Concealing identity
+
+- Stealing identity
+
+- DeepFakes
+
+
+Pro of GANs for Anonymity:
+
+Provide safe environment for expression to, 
+
+- Stigmatized groups
+
+- Assault victims
+
+- Witnesses
+
+- Activists
+
+
+Con of GANs for Anonymity
+
+- Deepfakes put words into people's mouths
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

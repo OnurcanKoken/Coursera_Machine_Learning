@@ -1,0 +1,21 @@
+Keras -> Deep learning
+
+Emotion Detection Model
+
+similing 0 or 1
+
+Normalize image vectors, reshape
+
+
+***
+Önce kütüphaneleri tanımladı
+sonra veri setini çekti, normalize etti, reshape yaptı.
+sonra model oluşturdu,
+	height, width ve channel ı tuple olarak input_shape adıyla aldı, x_input u oluşturdu.
+	sonra zero padding 3, 3 yaptı
+	sonra conv, batchNormalization ve ReLU dan geçirdi
+	maxpool 2, 2
+	flatten, dense (fully connected layer)
+	create the model
+	return the model
+***
