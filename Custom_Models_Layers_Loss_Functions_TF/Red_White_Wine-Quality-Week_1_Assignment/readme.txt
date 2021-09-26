@@ -1,0 +1,2 @@
+Red_White_Wine-Binary_Classification-Quality-Regression-Week_1_Assignment
+Wine_Quality_Estimation_Type_Detection_Multiple_Output.ipynb
